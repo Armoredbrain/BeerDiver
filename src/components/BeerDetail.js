@@ -16,7 +16,15 @@ export default function BeerDetail({match}) {
     }, [match.params.id]);
 
     return !beer ? (
-        <div>Loading...</div>
+        <div
+            style={{
+                display: 'flex',
+                justifyContent: 'center',
+                marginTop: '50%'
+            }}
+        >
+            Loading...
+        </div>
     ) : (
         <div>
             <Card.Group

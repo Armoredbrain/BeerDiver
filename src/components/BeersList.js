@@ -6,14 +6,16 @@ import { Card, Icon, Image, Input } from 'semantic-ui-react';
 export default function BeersList() {
     const [initialBeers, setInitialBeers] = useState([]);
     const [filteredBeers, setFilteredBeers] = useState([]);
-    const [query, setQuery] = useState('');
+	const [query, setQuery] = useState('');
+	const [status, setStatus] = useState(false);
 
     useEffect(() => {
         axios
             .get(`https://api.punkapi.com/v2/beers`)
             .then(res => {
                 setInitialBeers(res.data);
-                setFilteredBeers(res.data);
+				setFilteredBeers(res.data);
+				setStatus(true);
             });
     }, []);
 
@@ -26,7 +28,17 @@ export default function BeersList() {
         setQuery(event.target.value);
     }
 
-    return (
+    return !status ? (
+        <div
+            style={{
+                display: 'flex',
+                justifyContent: 'center',
+                marginTop: '50%'
+            }}
+        >
+            Loading...
+        </div>
+    ) : (
         <div>
             <Input
                 placeholder='Search...'

@@ -6,10 +6,10 @@ export default function Header() {
             style={{
                 display: 'flex',
                 justifyContent: 'center',
-                marginBottom: '2%'
+                marginBottom: '3%'
             }}
         >
-            <h1>Beer Crawler</h1>
+            <h1>BEERS DIVER</h1>
         </div>
     )
 }
