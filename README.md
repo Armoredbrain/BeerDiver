@@ -1,4 +1,4 @@
-# Beer Diver
+# BEER DIVER
 
 ### PREREQUISITES
 
