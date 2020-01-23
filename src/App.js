@@ -4,7 +4,9 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import BooksList from './components/BooksList';
+import BeersList from './components/BeersList';
+import BeerDetail from './components/BeerDetail';
+import Header from './components/Header'
 import 'semantic-ui-css/semantic.min.css';
 import { Container } from 'semantic-ui-react';
 
@@ -12,8 +14,10 @@ function App() {
   return (
     <Container>
       <Router>
+        <Header />
         <Switch>
-            <Route exact path="/" component={BooksList} />
+            <Route exact path="/" component={BeersList} />
+            <Route exact path="/:id" component={BeerDetail} />
         </Switch>
       </Router>
     </Container>
