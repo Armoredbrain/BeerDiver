@@ -7,13 +7,11 @@
 
 ### HOW TO INSTALL IT?
 
-if you are using npm
-====================
+#### if you are using npm
 * run `npm install` to install dependencies
 * run `npm start` to launch server
 
-if you are using yarn
-=====================
+#### if you are using yarn
 * run `yarn` to install dependencies
 * run `yarn start` to launch server
 
